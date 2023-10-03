@@ -20,12 +20,10 @@ public:
 	{
 		return name;
 	}
-
 	string getSurname()
 	{
 		return surname;
 	}
-
 	int getAge()
 	{
 		return age;
@@ -35,21 +33,51 @@ public:
 	{
 		name = newName;
 	}
+	void setSurname(string newSurname)
+	{
+		surname = newSurname;
+	}
+	void setAge(int newAge) 
+	{
+		age = newAge;
+	}
 
 	void print()
 	{
-		cout << "Name: \n" << name << endl;
-		cout << "Surname: \n" << surname << endl;
-		cout << "Age: \n" << age << endl;
+		cout << "Name: " << name << endl;
+		cout << "Surname: " << surname << endl;
+		cout << "Age: " << age << endl;
+	}
+
+	void print(string name) 
+	{
+		cout << "Name: " << name << endl;
+	}
+
+	bool operator==(const person& p2) 
+	{
+		return (age == p2.age);
 	}
 
 	int compareTo(const person& p2)
 	{
 		int compare = -2;
 
-		if (age < p2.age)
+		if (age < p2.age) 
+		{
+			compare = -1;
+		}
+		
+		else if (age == p2.age) 
+		{
+			compare = 0;
+		}
+		else 
+		{
+			compare = 1;
+		}
+
+		return 0;
 	}
-
-
 
 };
