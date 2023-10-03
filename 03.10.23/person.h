@@ -77,7 +77,7 @@ public:
 			compare = 1;
 		}
 
-		return 0;
+		return compare;
 	}
 
 };

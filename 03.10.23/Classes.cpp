@@ -17,6 +17,7 @@ int main()
 		cout << "p1 and p2 are equal\n";
 	else
 		cout << "p1 and p2 are not equal\n";
+	int test = p1.compareTo(p2);
 	cout << "Compare: " << p1.compareTo(p2) << endl;
 
 	return 0;
